@@ -1,0 +1,118 @@
+.schemes-page { padding: 2rem 0 3rem; }
+
+.page-header { margin-bottom: 2rem; }
+.page-header h1 { font-size: 1.9rem; font-weight: 800; color: #202124; }
+.page-header p { color: #5f6368; margin-top: 0.4rem; }
+
+.search-bar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.search-input-wrap {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.9rem;
+  color: #5f6368;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.6rem;
+  border: 2px solid #dadce0;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.search-input:focus { border-color: #1a73e8; }
+
+.filters-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  color: #5f6368;
+  font-size: 0.9rem;
+}
+
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.filter-pill {
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1.5px solid #dadce0;
+  background: white;
+  font-size: 0.82rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s;
+  color: #5f6368;
+}
+
+.filter-pill:hover { border-color: #1a73e8; color: #1a73e8; }
+.filter-pill.active { border-color: #1a73e8; background: #1a73e8; color: white; }
+
+.gov-filter {
+  padding: 0.4rem 0.8rem;
+  border: 1.5px solid #dadce0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: #5f6368;
+  outline: none;
+  cursor: pointer;
+}
+
+.gov-filter:focus { border-color: #1a73e8; }
+
+.result-count {
+  font-size: 0.85rem;
+  color: #5f6368;
+  margin-bottom: 1rem;
+}
+
+.schemes-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.no-results {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #9aa0a6;
+}
+.no-results svg { margin: 0 auto 1rem; opacity: 0.4; }
+
+@media (max-width: 1024px) {
+  .schemes-list-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .search-bar { flex-direction: column; }
+  .schemes-list-grid { grid-template-columns: 1fr; }
+  .filter-group { font-size: 0.8rem; }
+}
